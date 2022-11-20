@@ -1,0 +1,28 @@
+.skills {
+    /*если сделать в container.module(который общий) указать высоту в процентах
+    и тут использовать min-height: 100vh; то блок контент сужается до высоты контента в нем*/
+    /*если оставить height: 100vh и добавить еще один "скилл" или текст будет длинным*/
+    /*то в узком разрешение наезжает на следующий блок*/
+    min-height: 100vh;
+    display: flex;
+    background-color: #abe1bb;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title {
+    background-color: #b6b6b6;
+}
+
+.skillsItems {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border: 1px solid;
+}

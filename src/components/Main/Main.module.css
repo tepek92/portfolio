@@ -1,0 +1,22 @@
+.main {
+    height: 100vh;
+    display: flex;
+    background-color: #ce95af;
+}
+
+.content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info {
+    background-color: #b6b6b6;
+}
+
+.photo {
+    width: 300px;
+    height: 500px;
+    background-color: #b6b6b6;
+}

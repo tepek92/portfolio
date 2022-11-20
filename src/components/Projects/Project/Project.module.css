@@ -1,0 +1,40 @@
+.project {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #b6b6b6;
+}
+
+.imgBox {
+    width: 100%;
+    height: 250px;
+    background-color: #706868;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    width: 150px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #b6b6b6;
+}
+
+.textBox {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.title {
+    background-color: #706868;
+}
+
+.description {
+    background-color: #706868;
+}

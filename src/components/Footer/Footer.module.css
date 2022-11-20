@@ -1,0 +1,47 @@
+.footer {
+    min-height: 400px;
+    display: flex;
+    background-color: #cae893;
+}
+
+.content {
+    width: 80%;
+    height: 300px;
+    border: 1px solid;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.name {
+    background-color: #b6b6b6;
+}
+
+.socialNetwork {
+    width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid;
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+    background-color: #b6b6b6;
+}
+
+
+.text {
+    min-width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #757575;
+}
+
+.text span {
+    display: block;
+}
