@@ -13,7 +13,6 @@ function App() {
             <Header/>
             <Main/>
             <Hi />
-            {/*<hr />*/}
             <Skills/>
             <Projects/>
             <Contact/>

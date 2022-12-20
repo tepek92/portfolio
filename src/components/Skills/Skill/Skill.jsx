@@ -11,7 +11,7 @@ function Skill(props) {
                 {/*<img src={icon} alt="icon"/>*/}
             </div>
             <h2 className={style.title}>{title}</h2>
-            <p className={style.description}>{description}</p>
+            {/*<p className={style.description}>{description}</p>*/}
         </div>
     );
 }

@@ -1,10 +1,28 @@
 .contact {
-    height: 100vh;
+    height: 600px;
     display: flex;
-    background-color: #eca674;
+    background-color: #6d56c1;
+    background-image: url(../../assets/image/img_bg_contact.jpeg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
+
+.contact::before{
+    background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    z-index: 0;
 }
 
 .content {
+    position: relative;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
