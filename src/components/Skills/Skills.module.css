@@ -3,10 +3,12 @@
     и тут использовать min-height: 100vh; то блок контент сужается до высоты контента в нем*/
     /*если оставить height: 100vh и добавить еще один "скилл" или текст будет длинным*/
     /*то в узком разрешение наезжает на следующий блок*/
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     display: flex;
-    background-color: #abe1bb;
+    /*background-color: #fff;*/
+    background: #f7f7f7;
 }
+
 
 .content {
     display: flex;
@@ -16,7 +18,8 @@
 }
 
 .title {
-    background-color: #b6b6b6;
+    align-self: flex-start;
+    /*background-color: #b6b6b6;*/
 }
 
 .skillsItems {
@@ -24,5 +27,6 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    border: 1px solid;
+    /*border: 1px solid;*/
 }
+

@@ -2,5 +2,14 @@
     min-width: 40%;
     display: flex;
     justify-content: space-around;
-    border: 1px solid blue;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-right: 50px;
 }
