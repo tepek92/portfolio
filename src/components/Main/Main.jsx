@@ -11,7 +11,6 @@ function Main() {
                 </div>
 
                 <div className={style.info}>
-                    {/*<span>Привет!</span>*/}
                     <p className={style.name}>Pavel Rasyk_</p>
                     <p className={style.work}>frontend developer</p>
                     <div className={style.contact}>

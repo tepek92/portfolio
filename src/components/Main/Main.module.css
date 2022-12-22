@@ -1,25 +1,23 @@
 .main {
-    /*height: 100vh;*/
-    /*height: 420px;*/
     margin-top: 50px;
     display: flex;
     background-color: #6d56c1;
-    background-image: url(../../assets/image/me.png);
+    /*background-image: url(../../assets/image/me.png);*/
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
     position: relative;
 }
 
-.main::before {
-    background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));
-    height: 100%;
-    left: 0;
-    right: 0;
-    position: absolute;
-    content: "";
-    z-index: 0;
-}
+/*.main::before {*/
+/*    background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));*/
+/*    height: 100%;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    position: absolute;*/
+/*    content: "";*/
+/*    z-index: 0;*/
+/*}*/
 
 .content {
     position: relative;
@@ -47,8 +45,12 @@
     top: 40px;
 }
 
+
+
 .info {
-    /*background-color: #b6b6b6;*/
+    /*width: 100%;*/
+    min-width: 1px;
+    min-height: 1px;
     margin-left: 30px;
     color: #fff;
     font-family: Roboto Mono,monospace;
@@ -76,6 +78,8 @@
 .info .contact .list{
     font-size: 16px;
     line-height: 24px;
+    word-break: break-word;
+
 }
 
 .info .contact .list dt {
@@ -89,4 +93,20 @@
     padding-left: 80px;
     margin-bottom: 15px;
     font-weight: 600;
+}
+
+
+@media screen and (max-width: 834px) {
+    .photo {
+        display: none;
+    }
+    .info {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .info .contact .list dd {
+        padding-left: 60px;
+    }
 }

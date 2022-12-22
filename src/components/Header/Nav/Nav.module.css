@@ -13,3 +13,15 @@
     font-weight: 700;
     padding-right: 50px;
 }
+
+@media screen and (max-width: 430px)  {
+    .nav a {
+        padding-right: 30px;
+    }
+}
+
+@media screen and (max-width: 360px)  {
+    .nav a {
+        padding-right: 10px;
+    }
+}
