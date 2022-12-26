@@ -1,6 +1,6 @@
 import style from './Project.module.css';
 
-function Project({title, description, imgProject}) {
+function Project({title, description, imgProject, link}) {
     return (
         <div className={style.project}>
             <div className={style.imgBox}>
@@ -17,7 +17,7 @@ function Project({title, description, imgProject}) {
                     <li>react</li>
                     <li>redux</li>
                 </ul>
-                <a className={style.linkProject} href="?#">www.github.com</a>
+                <a className={style.linkProject} href={link}>www.github.com</a>
             </div>
         </div>
     );

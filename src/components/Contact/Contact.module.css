@@ -1,5 +1,5 @@
 .contact {
-    height: 600px;
+    /*min-height: 600px;*/
     display: flex;
     background-color: #6d56c1;
     background-image: url(../../assets/image/img_bg_contact.jpeg);
@@ -22,44 +22,180 @@
 
 .content {
     position: relative;
-
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    /*justify-content: space-between;*/
+    /*align-items: center;*/
 }
 
 .title {
-    background-color: #b6b6b6;
+    align-self: flex-start;
+    color: #fff
+}
+
+.infoBox {
+    display: flex;
+    /*justify-content: space-between;*/
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .infoBox {
+        flex-direction: column;
+    }
+}
+
+.infoContacts {
+    margin-right: 100px;
+}
+
+.infoContacts .list{
+    font-size: 16px;
+    line-height: 24px;
+    word-break: break-word;
+    margin-bottom: 45px;
+}
+
+.infoContacts .list dt {
+    float: left;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.infoContacts .list dd {
+    padding-left: 80px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.infoContacts .list dd a {
+    text-decoration: none;
+}
+
+.infoContacts .list dd a:hover {
+    text-decoration: underline;
+}
+
+.infoContacts ul {
+    padding: 0;
+    list-style: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Roboto,sans-serif;
+    font-weight: 400;
+}
+
+.infoContacts li {
+    margin-bottom: 20px;
+}
+
+.infoContacts a {
+    color: #fff;
+    text-decoration: underline;
+    padding: 6px 0;
+    transition: all .3s;
+}
+
+.formBox {
+
+}
+
+.formTitle {
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Roboto Mono,monospace;
 }
 
 .form {
-    width: 280px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border: 1px solid;
+    /*width: 280px;*/
+    /*height: 300px;*/
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+    /*flex-wrap: wrap;*/
+    /*border: 1px solid;*/
 }
 
-.form input {
-    height: 30px;
+.formGroup {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.form input, textarea{
+    width: 100%;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    padding: 10px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: Roboto Mono,monospace;
+    overflow: visible;
+    touch-action: manipulation;
+}
+
+.form input:invalid {
+    outline: none;
+    box-shadow: #fff;
+
+}
+
+.form input:focus,  textarea:focus{
+    outline: none;
+    -webkit-box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.5) inset;
+    -moz-box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.5) inset;
+    box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.5) inset;
+}
+::-webkit-input-placeholder { /* WebKit browsers */
+    color:    #fff;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #fff;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #fff;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #fff;
 }
 
 .form textarea {
     height: 150px;
 }
 
-.button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 150px;
+.formBox button {
+    width: 100%;
+    border: none;
+    box-shadow: 0 1px 29px rgb(0 0 0 / 16%);
+    position: relative;
+    background-color: #6d56c1;
     height: 50px;
-    background-color: #757575;
+    border-radius: 25px;
+    font-size: 14px;
+    line-height: 20px;
+    text-transform: uppercase;
+    padding: 15px;
+    min-width: 170px;
+    text-align: center;
+    display: inline-block;
+    color: #fff;
+    font-weight: 600;
+    overflow: hidden;
 }
 
-.button span {
-    display: block;
+.formBox button:hover {
+    background-color: #8670d5;
+}
+
+.footer {
+    color: #fff;
+    opacity: .4;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+    ont-size: 16px;
+    line-height: 24px;
+    font-family: Roboto Mono,monospace;
 }

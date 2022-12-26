@@ -2,22 +2,22 @@
     margin-top: 50px;
     display: flex;
     background-color: #6d56c1;
-    /*background-image: url(../../assets/image/me.png);*/
+    background-image: url(../../assets/image/me.png);
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: cover;
     position: relative;
 }
 
-/*.main::before {*/
-/*    background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));*/
-/*    height: 100%;*/
-/*    left: 0;*/
-/*    right: 0;*/
-/*    position: absolute;*/
-/*    content: "";*/
-/*    z-index: 0;*/
-/*}*/
+.main::before {
+    background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));
+    height: 100%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    content: "";
+    z-index: 0;
+}
 
 .content {
     position: relative;
@@ -93,6 +93,25 @@
     padding-left: 80px;
     margin-bottom: 15px;
     font-weight: 600;
+}
+.info .contact .list dd a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.info .contact .list dd a:hover {
+    text-decoration: underline;
+}
+.socialNetwork svg {
+    fill: #fff;
+    opacity: .4;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+
+.socialNetwork svg:hover {
+    opacity: 1;
+
 }
 
 

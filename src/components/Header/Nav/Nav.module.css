@@ -12,7 +12,20 @@
     text-transform: uppercase;
     font-weight: 700;
     padding-right: 50px;
+    position: relative;
 }
+
+.nav a:hover {
+    color: #6d56c1;
+}
+
+.nav .active {
+    text-decoration: underline;
+}
+/*.nav .active:after {*/
+/*    !*content: '_';*!*/
+/*    !*text-decoration: underline;*!*/
+/*}*/
 
 @media screen and (max-width: 430px)  {
     .nav a {

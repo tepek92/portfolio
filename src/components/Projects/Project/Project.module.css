@@ -89,10 +89,10 @@
     font-size: 14px;
     line-height: 20px;
     color: #6d56c1;
-    transition: all .3s;
+    /*transition: all .3s;*/
     position: relative;
     text-decoration: none;
-    cursor: pointer;
+    /*cursor: pointer;*/
 
 }
 

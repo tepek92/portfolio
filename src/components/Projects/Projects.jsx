@@ -11,18 +11,24 @@ const SN_DESCRIPTION = 'Preference any astonished unreserved mrs. Prosperous und
 
 function Projects() {
     return (
-        <div className={style.projects}>
+        <div id="projects" className={style.projects}>
             <div className={style.content + ' ' + styleContainer.container}>
                 <div className={style.title}>
                     <Title title={"My Projects_"} />
                 </div>
                 <div className={style.projectsItems}>
                     <Project
-                        title={"Todolist web app for you company"} description={TD_DESCRIPTION}
-                        imgProject={todoImg}/>
+                        title={"Todolist web app for you company"}
+                        description={TD_DESCRIPTION}
+                        imgProject={todoImg}
+                        link={"https://github.com/tepek92/todolist"}
+                    />
                     <Project
-                        title={"Social Network web app for you"} description={SN_DESCRIPTION}
-                        imgProject={socialImg}/>
+                        title={"Social Network web app for you"}
+                        description={SN_DESCRIPTION}
+                        imgProject={socialImg}
+                        link={"https://github.com/tepek92/samurai_way_ts"}
+                    />
 
                 </div>
             </div>

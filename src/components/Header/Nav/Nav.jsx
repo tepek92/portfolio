@@ -1,18 +1,54 @@
 import style from './Nav.module.css';
+import { Link } from "react-scroll";
 
 function Nav() {
+
+
     return (
         <div className={style.nav}>
-            {/*<a href="?#">Главная</a>*/}
-            {/*<a href="?#">Скилы</a>*/}
-            {/*<a href="?#">Проекты</a>*/}
-            {/*<a href="?#">Контакты</a>*/}
-            <a href="?#">home</a>
-            <a href="?#">skills</a>
-            <a href="?#">project</a>
-            <a href="?#">contact</a>
+            <Link
+                activeClass={style.active}
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+            >
+                home
+            </Link>
+            <Link
+                activeClass={style.active}
+                to="skills"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+            >
+                skills
+            </Link>
+            <Link
+                activeClass={style.active}
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+            >
+                projects
+            </Link>
+            <Link
+                activeClass={style.active}
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+            >
+                contact
+            </Link>
         </div>
     );
 }
+
 
 export default Nav;

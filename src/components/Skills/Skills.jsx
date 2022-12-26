@@ -23,7 +23,7 @@ const JS_DESCRIPTION = 'JavaScript, often abbreviated as JS, is a programming la
 
 function Skills() {
     return (
-        <div className={style.skills}>
+        <section id="skills" className={style.skills}>
             <div className={style.content + ' ' + styleContainer.container}>
                 <div className={style.title}>
                     <Title title={"My Skills_"} />
@@ -38,7 +38,7 @@ function Skills() {
 
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
