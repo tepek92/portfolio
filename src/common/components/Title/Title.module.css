@@ -2,7 +2,56 @@
     margin-bottom: 40px;
     font-size: 36px;
     line-height: 42px;
-    font-family: Roboto Mono,monospace;
+    font-family: Roboto Mono, monospace;
     font-weight: 400;
     color: #555;
+
 }
+
+/*.title {*/
+/*    width: 40em;*/
+/*    !*color:green;*!*/
+/*    !*font-size: 22px;*!*/
+/*    !*font-family: 'Marck Script', cursive;*!*/
+/*    white-space:nowrap;*/
+/*    overflow:hidden;*/
+/*    -webkit-animation: type 10s steps(50, end);*/
+/*    animation: type 10s steps(50, end);*/
+/*}*/
+/*@keyframes type{*/
+/*    from { width: 0; }*/
+/*}*/
+/*@-webkit-keyframes type{*/
+/*    from { width: 0; }*/
+/*}*/
+/*h2 { font: bold 48px/1em 'Consolas', monospace; color: #092f71; }*/
+
+/*span {*/
+/*    display: inline-block;*/
+/*    white-space: nowrap;*/
+/*    overflow: hidden;*/
+
+/*    height: 100px;*/
+/*    margin-right: 6ch;*/
+/*    vertical-align: top;*/
+/*    animation: shrink steps(6) 3s infinite alternate;*/
+/*}*/
+
+/*@keyframes shrink {*/
+/*    from { width: calc(100% + 1ch); }*/
+/*    to { width: 0; }*/
+/*}*/
+
+/*.title {*/
+/*    width: 300px;*/
+/*    white-space:nowrap;*/
+/*    overflow:hidden;*/
+/*    -webkit-animation: type 5s steps(100, end);*/
+/*    animation: type 5s steps(100, end);*/
+/*}*/
+/*@keyframes type{*/
+/*    from { width: 0; }*/
+/*}*/
+/*@-webkit-keyframes type{*/
+/*    from { width: 0; }*/
+/*}*/
