@@ -1,4 +1,4 @@
-import style from './InfoContact.module.css';
+import style from './InfoContact.module.scss';
 
 
 function InfoContact() {

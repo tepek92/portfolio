@@ -1,0 +1,29 @@
+@import "../../common/styles/sass/variables";
+
+.projects {
+  display: flex;
+  background-color: $bgColorPrimary;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      align-self: flex-start;
+    }
+
+    .projectsItems {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+
+}
+
+
+

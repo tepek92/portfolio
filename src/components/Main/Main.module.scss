@@ -1,0 +1,119 @@
+@import "../../common/styles/sass/variables";
+@import "../../common/styles/sass/mixins";
+
+.main {
+  margin-top: 50px;
+  display: flex;
+  background-color: $accentColor;
+  background-image: url(../../assets/image/me.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+
+  .content {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .photo {
+      width: 320px;
+
+      img {
+        border-radius: 5px;
+        box-shadow: 0 0 27px rgba(96, 96, 96, 0.34);
+        width: 90%;
+        height: 380px;
+        -o-object-fit: cover;
+        object-fit: cover;
+        margin-top: 10px;
+        position: relative;
+        top: 40px;
+      }
+
+      @media screen and (max-width: 834px) {
+        display: none;
+      }
+    }
+
+    .info {
+      min-width: 1px;
+      min-height: 1px;
+      margin-left: 30px;
+      color: $textColorSecondary;
+      font-family: $fontFamilyTitle;
+
+      .name {
+        @include text($textColorSecondary, 44px, 50px, 700);
+        margin-top: 40px;
+        margin-bottom: 10px;
+      }
+
+      .work {
+        font-size: 16px;
+        line-height: 24px;
+        margin-bottom: 40px;
+      }
+
+      .contact {
+        margin-bottom: 20px;
+
+        .list {
+          font-size: 16px;
+          line-height: 24px;
+          word-break: break-word;
+
+          dt {
+            opacity: .4;
+            float: left;
+            font-weight: 700;
+            text-transform: uppercase;
+          }
+
+          dd {
+            padding-left: 80px;
+            margin-bottom: 15px;
+            font-weight: 600;
+
+            a {
+              color: $bgColorPrimary;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+
+            @media screen and (max-width: 430px) {
+              padding-left: 60px;
+            }
+          }
+        }
+      }
+
+      .socialNetwork {
+        svg {
+          fill: $bgColorPrimary;
+          opacity: .4;
+          margin-right: 30px;
+          margin-bottom: 20px;
+
+          &:hover {
+            opacity: 1;
+
+          }
+        }
+      }
+
+      @media screen and (max-width: 834px) {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &::before {
+    @include bgGradient();
+  }
+}

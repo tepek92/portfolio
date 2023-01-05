@@ -1,0 +1,54 @@
+@import "../../../common/styles/sass/variables";
+@import "../../../common/styles/sass/mixins";
+
+.infoContacts {
+  margin-right: 100px;
+  font-family: $fontFamilyTitle;
+
+  .list {
+    font-size: 16px;
+    line-height: 24px;
+    word-break: break-word;
+    margin-bottom: 45px;
+
+    dt {
+      float: left;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    dd {
+      padding-left: 80px;
+      margin-bottom: 15px;
+      font-weight: 600;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  ul {
+    @include text($textColorSecondary, 16px, 24px, 400);
+    padding: 0;
+    list-style: none;
+    font-family: $fontFamilyText;
+
+    li {
+      margin-bottom: 20px;
+
+      a {
+        color: #fff;
+        text-decoration: underline;
+        padding: 6px 0;
+        transition: all .3s;
+      }
+
+    }
+  }
+}

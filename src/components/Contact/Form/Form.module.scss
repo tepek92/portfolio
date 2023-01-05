@@ -1,0 +1,137 @@
+@import "../../../common/styles/sass/variables";
+@import "../../../common/styles/sass/mixins";
+
+.formBox {
+  .formTitle {
+    font-family: $fontFamilyTitle;
+    @include text($textColorSecondary, 16px, 24px, 400);
+    margin-left: 50px;
+    @media screen and (max-width: 1205px) {
+      margin-left: 0;
+    }
+  }
+
+  .form {
+    margin-left: 50px;
+    width: 500px;
+
+    .formGroup {
+      margin-bottom: 15px;
+      position: relative;
+
+      input, textarea {
+        width: 100%;
+        background-color: transparent;
+        border-radius: 3px;
+        border: 1px solid #fff;
+        padding: 10px;
+        @include text($textColorSecondary, 16px, 24px, 400);
+        font-family: $fontFamilyTitle;
+        overflow: visible;
+        touch-action: manipulation;
+      }
+
+      input:-webkit-autofill, textarea:-webkit-autofill {
+        transition: all 5000s ease-in-out 0s;
+      }
+
+      input:focus, textarea:focus {
+        outline: none;
+        box-shadow: 0 0 10px 1px rgba(255, 255, 255, 0.5) inset;
+        border: 1px solid #fff;
+
+      }
+
+      .error {
+        border: 1px solid red;
+        box-shadow: $errorBoxShadow;
+
+        input:focus, textarea:focus {
+          outline: none;
+          box-shadow: $errorBoxShadow;
+          border: 1px solid red;
+        }
+      }
+
+      textarea {
+        height: 150px;
+      }
+
+      .textError {
+        @include text($textColorPrimary, 14px, 24px, 400);
+        font-family: $fontFamilyText;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $bgColorPrimary;
+        text-align: center;
+        border-radius: 6px;
+        padding: 10px;
+        position: absolute;
+        z-index: 1;
+        bottom: -135%;
+
+        svg {
+          margin-right: 5px;
+          fill: #efb62e;
+          width: 32px;
+          height: 32px;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: -20px;
+          left: 10%;
+          margin-left: -5px;
+          border-width: 10px;
+          border-style: solid;
+          border-color: transparent transparent #fff transparent;
+        }
+      }
+
+      .textAreaError {
+        bottom: -40%;
+      }
+    }
+
+    button {
+      width: 100%;
+      height: 50px;
+      border: none;
+      border-radius: 25px;
+      background-color: $accentColor;
+      box-shadow: 0 1px 29px rgba(0, 0, 0, 0.16);
+      @include text($textColorSecondary, 14px, 20px, 600);
+      text-transform: uppercase;
+      padding: 15px;
+      text-align: center;
+
+      &:hover {
+        background-color: #8670d5;
+      }
+    }
+
+    @media screen and (max-width: 1205px) {
+      margin-left: 0;
+      width: 100%;
+    }
+
+  }
+
+}
+
+.footer {
+  opacity: .4;
+  width: 100%;
+  text-align: center;
+  margin-top: 60px;
+
+  @include text($textColorSecondary, 16px, 24px, 400);
+  font-family: $fontFamilyTitle;
+}
+
+::-webkit-input-placeholder {
+  color: $textColorSecondary;
+  opacity: .5;
+}

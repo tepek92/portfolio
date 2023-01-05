@@ -1,0 +1,93 @@
+@import "../../../common/styles/sass/variables";
+@import "../../../common/styles/sass/mixins";
+
+.project {
+  display: flex;
+  margin-bottom: 40px;
+  font-family: Roboto Mono, monospace;
+
+  .imgBox {
+    width: 100%;
+    background-color: #706868;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      vertical-align: middle;
+    }
+  }
+
+  .textBox {
+    width: 100%;
+    padding: 50px 50px 40px 30px;
+    border: 1px solid #f1f1f1;
+
+    p {
+      display: block;
+    }
+
+    .title {
+      @include text($textColorPrimary, 18px, 30px, 700);
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .description {
+      @include text($textColorPrimary, 16px, 24px, 400);
+
+      font-family: Roboto, sans-serif;
+      margin-bottom: 45px;
+    }
+
+    .stack {
+      @include text($textColorPrimary, 12px, 28px, 700);
+
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .tags {
+      list-style: none;
+      padding: 0;
+      display: block;
+
+      li {
+        display: inline-block;
+        @include text($textColorPrimary, 14px, 20px, 400);
+        background-color: $bgColorPrimary;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.14);
+        padding: 5px 10px;
+        margin-right: 10px;
+        border-radius: 3px;
+        @media screen and (max-width: 1042px) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+
+    .linkProject {
+      float: right;
+      margin-top: 55px;
+      @include text($accentColor, 14px, 20px, 400);
+      position: relative;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+  }
+
+}
+
+
+
+
+
+
+

@@ -1,112 +1,69 @@
-import style from './Form.module.css';
-import {useState} from "react";
+import style from './Form.module.scss';
 import {WarningIcon} from "../../../common/components/Icons/WarningIcon";
-
+import {useFormik} from "formik";
+import * as Yup from 'yup';
 
 function Form() {
 
-    const [name, setName] = useState('');
-    const [mail, setMail] = useState('');
-    const [text, setText] = useState('');
-    const [errorName, setErrorName] = useState('');
-    const [errorMail, setErrorMail] = useState('');
-    const [errorText, setErrorText] = useState('');
-
-    const validatorInput = () => {
-        let error = false;
-        if (name.trim() === '') {
-            setErrorName('field cannot be empty')
-            setErrorMail('')
-            setErrorText('')
-            error = true;
-        } else if (mail.trim() === '') {
-            setErrorMail('field cannot be empty')
-            setErrorName('')
-            setErrorText('')
-            error = true;
-        } else if ((!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(mail.trim()))) {
-            setErrorMail('Invalid email address')
-            setErrorName('')
-            setErrorText('')
-            error = true;
-        } else if (text.trim() === '') {
-            setErrorText('field cannot be empty')
-            setErrorName('')
-            setErrorMail('')
-            error = true;
-        }
-
-        return error;
-    }
-
-
-    const changeName = e => {
-        setErrorName('')
-        setName(e.currentTarget.value)
-    }
-    const changeMail = e => {
-        setErrorMail('')
-        setMail(e.currentTarget.value)
-    }
-    const changeText = e => {
-        setErrorText('')
-        setText(e.currentTarget.value)
-    }
-
-    const onSubmit = (e) => {
-        e.preventDefault()
-        if (!validatorInput()) {
-
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            email: '',
+            text: ''
+        },
+        validationSchema: Yup.object({
+            name: Yup.string()
+                .required('field cannot be empty'),
+            text: Yup.string()
+                .required('field cannot be empty'),
+            email: Yup.string().email('Invalid email address').required('field cannot be empty'),
+        }),
+        onSubmit: (values) => {
             alert(`Представим, что запрос ушел на сервер и отправилось письмо:)
-            name: ${name}
-            email: ${mail}
-            text message: ${text}`)
+            name: ${values.name}
+            email: ${values.email}
+            text message: ${values.text}`);
+            formik.resetForm();
+        },
+    });
 
-            setName('')
-            setMail('')
-            setText('')
-        }
-    }
-
-
-    const nameStyle = errorName ? style.error : '';
-    const mailStyle = errorMail ? style.error : '';
-    const textStyle = errorText ? style.error : '';
+    const nameStyle = formik.errors.name && formik.touched.name ? style.error : '';
+    const mailStyle = formik.errors.email && formik.touched.email ? style.error : '';
+    const textStyle = formik.errors.text && formik.touched.text ? style.error : '';
 
     return (
         <div>
             <div className={style.formBox}>
                 <p className={style.formTitle}>Or just write me a letter here_</p>
-                <form onSubmit={onSubmit} className={style.form}>
+
+                <form onSubmit={formik.handleSubmit} className={style.form}>
                     <div className={style.formGroup}>
                         <input
+                            autoComplete={"of"}
                             className={nameStyle}
-                            value={name}
-                            onChange={changeName}
-                            name="name"
                             type="text"
                             placeholder="Your name"
+                            {...formik.getFieldProps('name')}
                         />
-                        {errorName &&
+                        {nameStyle &&
                             <span className={style.textError}>
                                 <WarningIcon/>
-                                {errorName}
+                                {formik.errors.name}
                             </span>
                         }
                     </div>
                     <div className={style.formGroup}>
                         <input
+                            autoComplete={"of"}
                             className={mailStyle}
-                            value={mail}
-                            onChange={changeMail}
-                            name="mail"
                             type="text"
                             placeholder="Your e-mail"
+                            {...formik.getFieldProps('email')}
                         />
-                        {errorMail &&
+                        {mailStyle &&
                             <span className={style.textError}>
                                 <WarningIcon/>
-                                {errorMail}
+                                {formik.errors.email}
                         </span>
                         }
 
@@ -114,23 +71,24 @@ function Form() {
 
                     <div className={style.formGroup}>
                         <textarea
+                            autoComplete={"of"}
                             className={textStyle}
-                            value={text}
-                            onChange={changeText}
-                            name="text"
                             placeholder="Type the message here"
+                            {...formik.getFieldProps('text')}
                         />
-                        {errorText &&
+                        {textStyle &&
                             <span className={style.textError + ' ' + style.textAreaError}>
                                 <WarningIcon/>
-                                {errorText}
+                                {formik.errors.text}
                             </span>
                         }
                     </div>
-                    <button>send</button>
+                    <button type="submit">send</button>
 
                 </form>
             </div>
+
+
             <div className={style.footer}>
                 <p>© 2022 Pavel Rasyk. All Rights Reserved</p>
             </div>

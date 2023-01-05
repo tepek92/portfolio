@@ -1,12 +1,12 @@
-import style from './Skills.module.css';
+import style from './Skills.module.scss';
 import styleContainer from '../../common/styles/Container.module.css'
 import Skill from "./Skill/Skill";
 import {Title} from "../../common/components/Title/Title";
-import reactIcon from '../../assets/image/react_icon.svg'
+// import reactIcon from '../../assets/image/react_icon.svg'
 import reduxIcon from '../../assets/image/redux.svg'
-import htmlIcon from '../../assets/image/html.svg'
-import cssIcon from '../../assets/image/css.svg'
-import jsIcon from '../../assets/image/js.svg'
+// import htmlIcon from '../../assets/image/html.svg'
+// import cssIcon from '../../assets/image/css.svg'
+// import jsIcon from '../../assets/image/js.svg'
 import tsIcon from '../../assets/image/ts.svg'
 
 import { faReact } from '@fortawesome/free-brands-svg-icons'

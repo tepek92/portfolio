@@ -1,0 +1,16 @@
+@mixin bgGradient() {
+  background: linear-gradient(54deg,rgba(74,76,179,.95) 34%,hsla(0,34%,71%,.95));
+  height: 100%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  content: "";
+  z-index: 0;
+}
+
+@mixin text($textColor, $fontSize, $lineHeight, $fontWeight) {
+  color: $textColor;
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}

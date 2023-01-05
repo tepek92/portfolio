@@ -1,4 +1,4 @@
-import style from './Contact.module.css';
+import style from './Contact.module.scss';
 import styleContainer from '../../common/styles/Container.module.css'
 import {Title} from "../../common/components/Title/Title";
 import InfoContact from "./InfoContact/InfoContact";

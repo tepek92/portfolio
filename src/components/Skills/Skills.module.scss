@@ -1,0 +1,24 @@
+@import "../../common/styles/sass/variables";
+
+.skills {
+  display: flex;
+  background: $bgColorSecondary;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    .title {
+      align-self: flex-start;
+    }
+
+    .skillsItems {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}

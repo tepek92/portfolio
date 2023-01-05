@@ -1,0 +1,38 @@
+@import "../../common/styles/sass/variables";
+@import "../../common/styles/sass/mixins";
+
+.contact {
+  display: flex;
+  background-color: $accentColor;
+  background-image: url(../../assets/image/img_bg_contact.jpeg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+  color: $textColorSecondary;
+
+  &::before {
+    @include bgGradient();
+  }
+
+  .content {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .title {
+      align-self: flex-start;
+      color: $textColorSecondary
+    }
+
+    .infoBox {
+      display: flex;
+      margin-top: 20px;
+      @media screen and (max-width: 985px) {
+        flex-direction: column;
+      }
+    }
+  }
+}

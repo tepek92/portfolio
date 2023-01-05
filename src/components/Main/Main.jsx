@@ -1,4 +1,4 @@
-import style from './Main.module.css';
+import style from './Main.module.scss';
 import styleContainer from '../../common/styles/Container.module.css'
 import mePhoto from '../../assets/image/me.png'
 import {GitHubIcon} from "../../common/components/Icons/GitGubIcon";
