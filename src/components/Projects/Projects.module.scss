@@ -3,6 +3,7 @@
 .projects {
   display: flex;
   background-color: $bgColorPrimary;
+  position: relative;
 
   .content {
     display: flex;

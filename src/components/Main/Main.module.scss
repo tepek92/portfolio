@@ -11,6 +11,16 @@
   background-size: cover;
   position: relative;
 
+  .particle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .2;
+    z-index: 0;
+  }
+
   .content {
     position: relative;
     display: flex;
@@ -31,6 +41,7 @@
         margin-top: 10px;
         position: relative;
         top: 40px;
+        z-index: 10;
       }
 
       @media screen and (max-width: 834px) {
@@ -44,6 +55,7 @@
       margin-left: 30px;
       color: $textColorSecondary;
       font-family: $fontFamilyTitle;
+      position: relative;
 
       .name {
         @include text($textColorSecondary, 44px, 50px, 700);
@@ -63,7 +75,6 @@
         .list {
           font-size: 16px;
           line-height: 24px;
-          //word-break: break-word;
 
           dt {
             opacity: .4;

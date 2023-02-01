@@ -1,14 +1,17 @@
 import style from './Main.module.scss';
 import styleContainer from '../../common/styles/Container.module.css'
-import mePhoto from '../../assets/image/me.png'
+import mePhoto from '../../assets/image/me.png';
 import {GitHubIcon} from "../../common/components/Icons/GitGubIcon";
 import {LinkedInIcon} from "../../common/components/Icons/LinkedInIcon";
 import {InstagramIcon} from "../../common/components/Icons/InstagramIcon";
+import {Particle} from "./Particle/Particle";
 
-function Main() {
+export const Main = () => {
     return (
         <div id="home" className={style.main}>
             <div className={style.content + ' ' + styleContainer.container}>
+                <Particle />
+
                 <div className={style.photo}>
                     <img src={mePhoto} alt="mePhoto"/>
                 </div>
@@ -45,5 +48,3 @@ function Main() {
         </div>
     );
 }
-
-export default Main;
