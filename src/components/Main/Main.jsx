@@ -5,6 +5,7 @@ import {GitHubIcon} from "../../common/components/Icons/GitGubIcon";
 import {LinkedInIcon} from "../../common/components/Icons/LinkedInIcon";
 import {InstagramIcon} from "../../common/components/Icons/InstagramIcon";
 import {Particle} from "./Particle/Particle";
+import Fade from 'react-reveal/Fade';
 
 export const Main = () => {
     return (
@@ -15,7 +16,7 @@ export const Main = () => {
                 <div className={style.photo}>
                     <img src={mePhoto} alt="mePhoto"/>
                 </div>
-
+                <Fade bottom>
                 <div className={style.info}>
                     <p className={style.name}>Pavel Rasyk_</p>
                     <p className={style.work}>frontend developer</p>
@@ -44,6 +45,7 @@ export const Main = () => {
 
                     </div>
                 </div>
+                </Fade>
             </div>
         </div>
     );
