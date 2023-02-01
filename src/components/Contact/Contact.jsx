@@ -10,9 +10,10 @@ function Contact() {
 
     return (
         <div id="contact" className={style.contact}>
-            <Fade bottom>
 
-                <div className={style.content + ' ' + styleContainer.container}>
+            <div className={style.content + ' ' + styleContainer.container}>
+                <Fade bottom>
+
                     <div className={style.title}>
                         <Title color={"white"} title={"Get in touch_"}/>
                     </div>
@@ -21,8 +22,8 @@ function Contact() {
                         <Form/>
                     </div>
 
-                </div>
-            </Fade>
+                </Fade>
+            </div>
         </div>
     );
 }
