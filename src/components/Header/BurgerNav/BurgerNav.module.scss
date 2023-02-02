@@ -1,0 +1,66 @@
+@import "../../../common/styles/sass/variables";
+@import "../../../common/styles/sass/mixins";
+
+.navBurger {
+  width: 100%;
+  height: 100%;
+
+  .navBurgerItems {
+    height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    background: $bgColorPrimary;
+    padding: 30px;
+    transform: translate(0, -230px);
+    transition: 0.5s;
+
+    a {
+      cursor: pointer;
+      text-decoration: none;
+      @include text($textColorPrimary, 14px, 20px, 700);
+      text-transform: uppercase;
+
+      &:hover {
+        color: $accentColor;
+      }
+
+      .active {
+        text-decoration: underline;
+      }
+    }
+
+  }
+
+  .navBtn {
+    position: absolute;
+    left: 10%;
+    top: 18px;
+
+
+    svg {
+      cursor: pointer;
+      width: 28px;
+      fill: $textColorPrimary;
+
+      &:hover {
+        width: 30px;
+      }
+    }
+
+    @media screen and (min-width: 835px) {
+      display: none;
+    }
+
+  }
+
+  .showMenuItems {
+    height: 230px;
+    transform: translate(0, 0);
+  }
+}

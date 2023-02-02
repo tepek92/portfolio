@@ -18,12 +18,9 @@
       color: $accentColor;
     }
 
-    @media screen and (max-width: 430px) {
+    @media screen and (max-width: 834px) {
+      display: none;
       padding-right: 30px;
-    }
-
-    @media screen and (max-width: 360px) {
-      padding-right: 10px;
     }
   }
 
