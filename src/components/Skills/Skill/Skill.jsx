@@ -1,7 +1,7 @@
 import style from './Skill.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function Skill(props) {
+export const Skill = (props) => {
     const {title, icon, faIcons} = props;
     return (
         <div className={style.skill}>
@@ -13,5 +13,3 @@ function Skill(props) {
         </div>
     );
 }
-
-export default Skill;

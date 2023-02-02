@@ -1,9 +1,9 @@
 import style from './Header.module.scss';
-import Nav from "./Nav/Nav";
+import {Nav} from "./Nav/Nav";
 import Fade from 'react-reveal/Fade';
-import BurgerNav from "./BurgerNav/BurgerNav";
+import {BurgerNav} from "./BurgerNav/BurgerNav";
 
-function Header() {
+export const Header = () => {
     return (
         <div className={style.header}>
             <Fade right>
@@ -15,5 +15,3 @@ function Header() {
         </div>
     );
 }
-
-export default Header;

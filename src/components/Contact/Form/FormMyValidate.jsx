@@ -2,8 +2,7 @@ import style from './Form.module.scss';
 import {useState} from "react";
 import {WarningIcon} from "../../../common/components/Icons/WarningIcon";
 
-
-function FormMyValidate() {
+export const FormMyValidate = () => {
 
     const [name, setName] = useState('');
     const [mail, setMail] = useState('');
@@ -138,28 +137,3 @@ function FormMyValidate() {
         </div>
     );
 }
-
-export default FormMyValidate;
-
-//
-// const validate = values => {
-//     const errors = {};
-//     if (!values.name) {
-//         errors.name = 'field cannot be empty';
-//         errors.email = '';
-//         errors.text = '';
-//     } else if (!values.email) {
-//         errors.email = 'field cannot be empty';
-//         errors.name = '';
-//         errors.text = '';
-//     } else if ((!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email))) {
-//         errors.email = 'Invalid email address';
-//         errors.name = '';
-//         errors.text = '';
-//     } else if (!values.text) {
-//         errors.text = 'field cannot be empty';
-//         errors.name = '';
-//         errors.email = '';
-//     }
-//     return errors;
-// };

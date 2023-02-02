@@ -4,7 +4,7 @@ import {MenuIcon} from "../../../common/components/Icons/MenuIcon";
 import {useState} from "react";
 import {CloseIcon} from "../../../common/components/Icons/CloseIcon";
 
-function BurgerNav() {
+export const BurgerNav = () => {
 
     const [open, setOpen] = useState(false)
     const onClickHandler = () => {
@@ -60,6 +60,3 @@ function BurgerNav() {
         </div>
     );
 }
-
-
-export default BurgerNav;

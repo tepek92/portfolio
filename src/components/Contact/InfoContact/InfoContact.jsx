@@ -1,7 +1,7 @@
 import style from './InfoContact.module.scss';
 
 
-function InfoContact() {
+export const InfoContact = () => {
 
     return (
         <div className={style.infoContacts}>
@@ -17,12 +17,10 @@ function InfoContact() {
                 <ul>
                     <li><a href="https://github.com/tepek92?tab=repositories">GitHub</a></li>
                     <li><a href="https://github.com/tepek92?tab=repositories">Linkedin</a></li>
-                    <li><a href="https://www.instagram.com/pavelrasyk/">Instagram</a></li>
+                    <li><a href="https://t.me/pavelrasyk">Telegram</a></li>
                 </ul>
             </div>
         </div>
 
     );
 }
-
-export default InfoContact;

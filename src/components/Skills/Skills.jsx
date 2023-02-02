@@ -1,6 +1,6 @@
 import style from './Skills.module.scss';
 import styleContainer from '../../common/styles/Container.module.css'
-import Skill from "./Skill/Skill";
+import {Skill} from "./Skill/Skill";
 import {Title} from "../../common/components/Title/Title";
 import reduxIcon from '../../assets/image/redux.svg'
 import tsIcon from '../../assets/image/ts.svg'
@@ -11,13 +11,12 @@ import {faCss3Alt} from '@fortawesome/free-brands-svg-icons'
 import {faSquareJs} from '@fortawesome/free-brands-svg-icons'
 import Fade from 'react-reveal/Fade';
 
-
 const REACT_DESCRIPTION = 'React makes it painless to create interactive UIs.'
 const CSS_DESCRIPTION = 'Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation.'
 const JS_DESCRIPTION = 'JavaScript, often abbreviated as JS, is a programming language that is one of the core technologies of the World '
 
 
-function Skills() {
+export const Skills = () => {
     return (
         <section id="skills" className={style.skills}>
             <Fade bottom>
@@ -37,7 +36,4 @@ function Skills() {
             </Fade>
         </section>
     )
-        ;
 }
-
-export default Skills;

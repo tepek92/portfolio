@@ -1,7 +1,7 @@
 import style from './Nav.module.scss';
 import {Link} from "react-scroll";
 
-function Nav() {
+export const Nav = () => {
 
     return (
         <div className={style.nav}>
@@ -41,6 +41,3 @@ function Nav() {
         </div>
     );
 }
-
-
-export default Nav;

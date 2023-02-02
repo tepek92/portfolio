@@ -3,7 +3,7 @@ import {WarningIcon} from "../../../common/components/Icons/WarningIcon";
 import {useFormik} from "formik";
 import * as Yup from 'yup';
 
-function Form() {
+export const Form = () => {
 
     const formik = useFormik({
         initialValues: {
@@ -95,5 +95,3 @@ function Form() {
         </div>
     );
 }
-
-export default Form;

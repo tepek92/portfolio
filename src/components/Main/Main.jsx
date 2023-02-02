@@ -3,19 +3,21 @@ import styleContainer from '../../common/styles/Container.module.css'
 import mePhoto from '../../assets/image/me.png';
 import {GitHubIcon} from "../../common/components/Icons/GitGubIcon";
 import {LinkedInIcon} from "../../common/components/Icons/LinkedInIcon";
-import {InstagramIcon} from "../../common/components/Icons/InstagramIcon";
 import {Particle} from "./Particle/Particle";
 import Fade from 'react-reveal/Fade';
 import ReactTypingEffect from 'react-typing-effect';
 import Tilt from 'react-tilt'
+import {TelegramIcon} from "../../common/components/Icons/TelegramIcon";
 
 export const Main = () => {
     return (
         <div id="home" className={style.main}>
             <div className={style.content + ' ' + styleContainer.container}>
                 <Particle/>
-                <Tilt className="Tilt" options={{max: 25}} style={{position: 'relative',
-                    zIndex: 10}}>
+                <Tilt className="Tilt" options={{max: 25}} style={{
+                    position: 'relative',
+                    zIndex: 10
+                }}>
                     <div className={style.photo}>
                         <img src={mePhoto} alt="mePhoto"/>
                     </div>
@@ -45,8 +47,8 @@ export const Main = () => {
                             <a href="https://github.com/tepek92?tab=repositories">
                                 <LinkedInIcon/>
                             </a>
-                            <a href="https://www.instagram.com/pavelrasyk/">
-                                <InstagramIcon/>
+                            <a href="https://t.me/pavelrasyk">
+                                <TelegramIcon/>
                             </a>
 
                         </div>

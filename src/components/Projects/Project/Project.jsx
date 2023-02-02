@@ -1,6 +1,6 @@
 import style from './Project.module.scss';
 
-function Project({title, description, imgProject, link}) {
+export const Project = ({title, description, imgProject, link, stack}) => {
     return (
         <div className={style.project}>
             <div className={style.imgBox}>
@@ -11,16 +11,10 @@ function Project({title, description, imgProject, link}) {
                 <p className={style.description}>{description}</p>
                 <p className={style.stack}>Used stack:</p>
                 <ul className={style.tags}>
-                    <li>type script</li>
-                    <li>html5</li>
-                    <li>css3</li>
-                    <li>react</li>
-                    <li>redux</li>
+                    {stack.map(s => <li key={s}>{s}</li>)}
                 </ul>
                 <a className={style.linkProject} href={link}>www.github.com</a>
             </div>
         </div>
     );
 }
-
-export default Project;

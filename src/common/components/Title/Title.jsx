@@ -1,5 +1,5 @@
 import style from './Title.module.css'
 
-export function Title({title, color}) {
+export const Title = ({title, color}) => {
     return <h2 style={{color: color}} className={style.title}><span>{title}</span></h2>
 }

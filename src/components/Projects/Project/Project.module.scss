@@ -60,16 +60,14 @@
         padding: 5px 10px;
         margin-right: 10px;
         border-radius: 3px;
-        @media screen and (max-width: 1042px) {
-          margin-bottom: 10px;
-        }
+        margin-bottom: 10px;
       }
     }
 
     .linkProject {
       float: right;
       margin-top: 55px;
-      @include text($accentColor, 14px, 20px, 400);
+      @include text($accentColor, 16px, 20px, 400);
       position: relative;
       text-decoration: none;
 
