@@ -2,9 +2,23 @@ import style from './Form.module.scss';
 import {WarningIcon} from "../../../common/components/Icons/WarningIcon";
 import {useFormik} from "formik";
 import * as Yup from 'yup';
+import emailjs from '@emailjs/browser';
+import {useRef} from "react";
+import {useSnackbar} from 'react-simple-snackbar'
+
+const options = {
+    position: 'bottom-left',
+    style: {
+        backgroundColor: 'rgb(56, 142, 60)',
+        fontFamily: 'Roboto, sans-serif;',
+        fontSize: '16px',
+        textAlign: 'center',
+    },
+}
 
 export const Form = () => {
-
+    const form = useRef();
+    const [openSnackbar] = useSnackbar(options)
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -19,11 +33,14 @@ export const Form = () => {
             email: Yup.string().email('Invalid email address').required('field cannot be empty'),
         }),
         onSubmit: (values) => {
-            alert(`Представим, что запрос ушел на сервер и отправилось письмо:)
-            name: ${values.name}
-            email: ${values.email}
-            text message: ${values.text}`);
-            formik.resetForm();
+            emailjs.sendForm('service_fgg8kun', 'template_dloiq3k', form.current
+                , 'N_E3DrHnfQ7L1WTit')
+                .then((result) => {
+                    openSnackbar('Your message has been sent, thanks!')
+                    formik.resetForm();
+                }, (error) => {
+                    console.log(error.text);
+                });
         },
     });
 
@@ -36,7 +53,7 @@ export const Form = () => {
             <div className={style.formBox}>
                 <p className={style.formTitle}>Or just write me a letter here_</p>
 
-                <form onSubmit={formik.handleSubmit} className={style.form}>
+                <form ref={form} onSubmit={formik.handleSubmit} className={style.form}>
                     <div className={style.formGroup}>
                         <input
                             autoComplete={"of"}

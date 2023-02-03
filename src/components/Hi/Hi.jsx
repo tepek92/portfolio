@@ -15,7 +15,7 @@ export const Hi = () => {
                         knowledge in this area and expand it with new technologies. In my free time, I solve puzzles on
                         Codewars. Open to your suggestions.</p>
                     <a className={style.btn}
-                       href="https://drive.google.com/file/d/1GgVF2vPV-uTQqAIEGkKSKNMbKzLEJO0z/view?usp=sharing">
+                       href="https://drive.google.com/drive/folders/1suKTqpsq8TriJtUeJG6D_MVqABL-ZHx4?usp=sharing">
                         <img src={btnIcon} alt="btn"/>
                         Download CV
                     </a>

@@ -5,16 +5,19 @@ import {Projects} from "./components/Projects/Projects";
 import {Contact} from "./components/Contact/Contact";
 import {Main} from "./components/Main/Main";
 import {Hi} from "./components/Hi/Hi";
+import SnackbarProvider from 'react-simple-snackbar'
 
 export const App = () => {
     return (
-        <div className="App">
-            <Header/>
-            <Main/>
-            <Hi/>
-            <Skills/>
-            <Projects/>
-            <Contact/>
-        </div>
+        <SnackbarProvider>
+            <div className="App">
+                <Header/>
+                <Main/>
+                <Hi/>
+                <Skills/>
+                <Projects/>
+                <Contact/>
+            </div>
+        </SnackbarProvider>
     );
 }
