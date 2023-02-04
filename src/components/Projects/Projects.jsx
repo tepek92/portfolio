@@ -8,7 +8,7 @@ import cardImg from "../../assets/image/Cards.png"
 import Fade from 'react-reveal/Fade';
 
 const TD_DESCRIPTION = 'Classic task manager. Implemented login and logout. Creation of several todolists, removal. You can add tasks, mark completed tasks, and filter tasks by status.'
-const SN_DESCRIPTION = 'Preference any astonished unreserved mrs. Prosperous understood middletons in conviction an uncommonly do. Supposing so be resolving breakfast am or perfectly. Is drew am hill from mr.'
+const SN_DESCRIPTION = 'In this project, I worked with class components and some old libraries. What can be useful in projects with legacy code.'
 const CARDS_DESCRIPTION = `Create learning cards and learn from them.
 You can create your own cards by adding pictures to them, as well as search for cards created by other users.`
 
