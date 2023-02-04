@@ -10,11 +10,14 @@ const options = {
     position: 'bottom-left',
     style: {
         backgroundColor: 'rgb(56, 142, 60)',
-        fontFamily: 'Roboto, sans-serif;',
+        fontFamily: 'Roboto, sans-serif',
         fontSize: '16px',
         textAlign: 'center',
     },
 }
+const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
+const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
+const PUBLIC_KEY = process.env.REACT_APP_PUBLIC_KEY
 
 export const Form = () => {
     const form = useRef();
@@ -33,8 +36,8 @@ export const Form = () => {
             email: Yup.string().email('Invalid email address').required('field cannot be empty'),
         }),
         onSubmit: (values) => {
-            emailjs.sendForm('service_fgg8kun', 'template_dloiq3k', form.current
-                , 'N_E3DrHnfQ7L1WTit')
+            emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form.current
+                , PUBLIC_KEY)
                 .then((result) => {
                     openSnackbar('Your message has been sent, thanks!')
                     formik.resetForm();
